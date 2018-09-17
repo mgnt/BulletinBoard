@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BulletinBoard"
-  s.version      = "1.3.0"
+  s.version      = "2.0.1"
   s.summary      = "Generate and Display Bottom Card Interfaces for iOS"
   s.description  = <<-DESC
     BulletinBoard is an iOS library that generates and manages contextual cards displayed at the bottom of the screen. It is especially well suited for quick user interactions such as onboarding screens or configuration.
@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/alexaubry/BulletinBoard.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
+  s.private_header_files = "Sources/Support/**/*.h"
   s.frameworks  = "UIKit"
   s.documentation_url = "https://alexaubry.github.io/BulletinBoard"
+  s.module_name = "BLTNBoard"
+  s.resources = "Resources/**/*.{lproj,png}"
 end
